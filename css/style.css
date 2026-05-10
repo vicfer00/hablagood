@@ -1,0 +1,363 @@
+/* HablaGood — custom styles layered on top of Tailwind CDN */
+
+/* ── Google Fonts ────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --color-primary: #1e3a5f;
+  --color-primary-dark: #162d4a;
+  --color-accent: #f59e0b;
+  --color-accent-dark: #d97706;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* ── Sticky header ───────────────────────────────────────── */
+#site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: var(--color-primary);
+  transition: box-shadow 0.2s;
+}
+
+#site-header.scrolled {
+  box-shadow: 0 2px 12px rgba(0,0,0,0.35);
+}
+
+/* ── Nav links ───────────────────────────────────────────── */
+.nav-link {
+  color: rgba(255,255,255,0.85);
+  font-weight: 500;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s, background-color 0.15s;
+  text-decoration: none;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #fff;
+  background-color: rgba(255,255,255,0.12);
+}
+
+/* ── Language toggle button ──────────────────────────────── */
+#lang-toggle {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 0.3rem 0.75rem;
+  border-radius: 9999px;
+  border: 1.5px solid rgba(255,255,255,0.5);
+  color: #fff;
+  background: transparent;
+  cursor: pointer;
+  transition: border-color 0.15s, background-color 0.15s;
+}
+
+#lang-toggle:hover {
+  border-color: #fff;
+  background-color: rgba(255,255,255,0.1);
+}
+
+/* ── Hamburger menu ──────────────────────────────────────── */
+#hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+#hamburger span {
+  display: block;
+  height: 2.5px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.25s, opacity 0.25s;
+}
+
+#hamburger.open span:nth-child(1) {
+  transform: translateY(8.75px) rotate(45deg);
+}
+#hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+#hamburger.open span:nth-child(3) {
+  transform: translateY(-8.75px) rotate(-45deg);
+}
+
+#mobile-menu {
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: var(--color-primary-dark);
+}
+
+#mobile-menu.open {
+  display: flex;
+}
+
+/* ── Floating WhatsApp button ────────────────────────────── */
+#whatsapp-fab {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 100;
+  background-color: #25d366;
+  color: #fff;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+}
+
+#whatsapp-fab:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+#whatsapp-fab svg {
+  width: 1.75rem;
+  height: 1.75rem;
+  fill: #fff;
+}
+
+/* ── Hero section ────────────────────────────────────────── */
+.hero-section {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #2a5298 100%);
+  color: #fff;
+}
+
+/* ── Buttons ─────────────────────────────────────────────── */
+.btn-accent {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: #1a1a1a;
+  font-weight: 700;
+  padding: 0.875rem 2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background-color 0.15s, transform 0.1s;
+}
+
+.btn-accent:hover {
+  background-color: var(--color-accent-dark);
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: #fff;
+  font-weight: 700;
+  padding: 0.875rem 2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background-color 0.15s, transform 0.1s;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-1px);
+}
+
+/* ── Section headings ────────────────────────────────────── */
+.section-heading {
+  font-size: 1.875rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+/* ── Benefit cards ───────────────────────────────────────── */
+.benefit-card {
+  background: #fff;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.benefit-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.benefit-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* ── Pricing cards ───────────────────────────────────────── */
+.pricing-card {
+  background: #fff;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  text-align: center;
+  border: 2px solid transparent;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.pricing-card.featured {
+  border-color: var(--color-accent);
+  transform: scale(1.04);
+}
+
+.pricing-price {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+/* ── FAQ accordion ───────────────────────────────────────── */
+.faq-item {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  padding: 1.25rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.faq-question .faq-icon {
+  font-size: 1.25rem;
+  font-weight: 400;
+  transition: transform 0.25s;
+  flex-shrink: 0;
+}
+
+.faq-question[aria-expanded="true"] .faq-icon {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  display: none;
+  padding: 0 0 1.25rem 0;
+  color: #4b5563;
+  line-height: 1.7;
+}
+
+.faq-answer.open {
+  display: block;
+}
+
+/* ── Week curriculum items ───────────────────────────────── */
+.week-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.week-badge {
+  background-color: var(--color-primary);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  white-space: nowrap;
+  margin-top: 0.15rem;
+}
+
+/* ── Detail rows (program page) ──────────────────────────── */
+.detail-row {
+  display: flex;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: var(--color-primary);
+  min-width: 9rem;
+  flex-shrink: 0;
+}
+
+/* ── Placeholder highlight ───────────────────────────────── */
+.placeholder {
+  background-color: #fef3c7;
+  color: #92400e;
+  border: 1.5px dashed var(--color-accent);
+  border-radius: 0.25rem;
+  padding: 0.1rem 0.4rem;
+  font-style: italic;
+  font-size: 0.875em;
+}
+
+/* ── Urgency banner ──────────────────────────────────────── */
+.urgency-section {
+  background: linear-gradient(135deg, var(--color-accent) 0%, #fbbf24 100%);
+  color: #1a1a1a;
+}
+
+/* ── Contact cards ───────────────────────────────────────── */
+.contact-card {
+  background: #fff;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+/* ── Footer ──────────────────────────────────────────────── */
+#site-footer {
+  background-color: var(--color-primary-dark);
+  color: rgba(255,255,255,0.75);
+}
+
+#site-footer a {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+#site-footer a:hover {
+  color: #fff;
+}
+
+/* ── Responsive: show hamburger on mobile ────────────────── */
+@media (max-width: 767px) {
+  #hamburger {
+    display: flex;
+  }
+
+  #desktop-nav {
+    display: none !important;
+  }
+
+  .pricing-card.featured {
+    transform: scale(1);
+  }
+}
