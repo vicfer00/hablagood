@@ -39,10 +39,9 @@ async function setLang(lang) {
   const strings = await loadLocale(lang);
   applyLocale(strings);
 
-  const toggleBtn = document.getElementById('lang-toggle');
-  if (toggleBtn) {
-    const toggleKey = getNestedValue(strings, 'nav.lang_toggle');
-    if (toggleKey) toggleBtn.textContent = toggleKey;
+  const toggleKey = getNestedValue(strings, 'nav.lang_toggle');
+  if (toggleKey) {
+    document.querySelectorAll('.lang-toggle').forEach(btn => { btn.textContent = toggleKey; });
   }
 }
 

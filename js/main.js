@@ -11,8 +11,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 /* ── Language toggle ─────────────────────────────────────── */
 function initNav() {
-  const langBtn = document.getElementById('lang-toggle');
-  if (langBtn) langBtn.addEventListener('click', toggleLang);
+  document.querySelectorAll('.lang-toggle').forEach(btn => btn.addEventListener('click', toggleLang));
 
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobile-menu');
