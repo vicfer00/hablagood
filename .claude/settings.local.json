@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir \"c:\\\\Users\\\\vicfe\\\\OneDrive\\\\Documents\\\\GitHub\\\\hablagood\\\\images\")"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\vicfe\\OneDrive\\Documents\\GitHub\\hablagood"
+    ]
+  }
+}
