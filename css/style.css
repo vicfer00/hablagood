@@ -347,6 +347,198 @@ html {
   color: #fff;
 }
 
+/* ── Schedule info bar ───────────────────────────────────── */
+.schedule-info-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem 1rem;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.info-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.75rem 1.5rem;
+  background: #f8fafc;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  min-width: 8rem;
+}
+
+.info-chip-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #9ca3af;
+}
+
+.info-chip-value {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+/* ── Calendar grid ───────────────────────────────────────── */
+.calendar-section {
+  padding: 2.5rem 1rem;
+}
+
+.calendar-section:nth-child(even) {
+  background: #f8fafc;
+}
+
+.calendar-month-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  border: 1.5px solid #d1d5db;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.cal-header-cell {
+  padding: 0.6rem 0.25rem;
+  text-align: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #6b7280;
+  border-bottom: 1.5px solid #d1d5db;
+  background: #f9fafb;
+}
+
+/* Class day columns (Mon=1, Wed=3, Thu=4) get a tint in the header */
+.cal-header-cell.class-col {
+  background-color: #eff6ff;
+  color: var(--color-primary);
+}
+
+.cal-cell {
+  min-height: 5rem;
+  padding: 0.5rem;
+  border-right: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+  position: relative;
+  background: #fff;
+}
+
+.cal-cell:nth-child(7n) {
+  border-right: none;
+}
+
+.cal-cell.class-col-bg {
+  background-color: #f0f7ff;
+}
+
+.cal-cell.empty {
+  background: #fafafa;
+}
+
+.cal-day-num {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #9ca3af;
+  line-height: 1;
+  margin-bottom: 0.35rem;
+}
+
+.cal-pill {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 9999px;
+  line-height: 1.2;
+}
+
+.cal-pill.class {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.cal-pill.first-day,
+.cal-pill.last-day {
+  background-color: var(--color-accent);
+  color: #1a1a1a;
+}
+
+.cal-pill.no-class {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.cal-week-label {
+  display: block;
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  opacity: 0.6;
+  margin-top: 0.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Break week — spans all 7 columns */
+.cal-break-row {
+  grid-column: 1 / -1;
+  background-color: #fef3c7;
+  border-bottom: 1px solid #fde68a;
+  border-right: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #92400e;
+}
+
+/* ── Schedule legend ─────────────────────────────────────── */
+.schedule-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  justify-content: center;
+  padding: 1.5rem 1rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: #4b5563;
+  font-weight: 500;
+}
+
+.legend-dot {
+  width: 0.85rem;
+  height: 0.85rem;
+  border-radius: 9999px;
+  flex-shrink: 0;
+}
+
+.legend-dot.class    { background-color: var(--color-primary); }
+.legend-dot.special  { background-color: var(--color-accent); }
+.legend-dot.break    { background-color: #fde68a; border: 1px solid #f59e0b; }
+
 /* ── Responsive: show hamburger on mobile ────────────────── */
 @media (max-width: 767px) {
   #hamburger {
