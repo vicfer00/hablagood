@@ -27,6 +27,8 @@
     "full_bundle": "Full 6-Week Bundle",
     "full_price": "$500",
     "full_note": "Best value — save $130 vs. paying week by week",
+    "payment_plan_label": "Payment plan available",
+    "payment_plan_detail": "$100 to register · $200 before June 1 · $200 before July 1",
     "per_week": "Per Week",
     "week_price": "$105",
     "week_note": "3 classes included each week",

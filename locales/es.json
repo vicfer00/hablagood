@@ -27,6 +27,8 @@
     "full_bundle": "Paquete Completo de 6 Semanas",
     "full_price": "$500",
     "full_note": "Mejor valor — ahorra $130 comparado con pagar semana por semana",
+    "payment_plan_label": "Plan de pago disponible",
+    "payment_plan_detail": "$100 al inscribirse · $200 antes del 1 de junio · $200 antes del 1 de julio",
     "per_week": "Por Semana",
     "week_price": "$105",
     "week_note": "Incluye 3 clases por semana",
